@@ -1,0 +1,199 @@
+body
+{
+	font-family: Arial, sans-serif;
+	color: #FFFFFF;
+}
+
+a
+{
+	text-decoration: none;
+	color: #6666FF;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+.desktop
+{
+	display: block;
+}
+
+.mobile
+{
+	display: none;
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+}
+
+.nav_bar
+{
+	
+}
+
+.nav_bar ul
+{
+	list-style: none;
+	list-style-type: none;
+	margin-top: 0px;
+	/*margin-left: -20px;*/
+	background-color: #ff0000;
+}
+
+.nav_bar li
+{
+	float: left;
+}
+
+.nav_bar li:first-of-type a
+{
+	border-radius: 10px 0px 0px 10px;
+}
+
+.nav_bar li:last-of-type a
+{
+	border-radius: 0px 10px 10px 0px;
+}
+
+.nav_bar a
+{
+	display: inline-block;
+	color: #FFFFFF;
+	text-decoration: none;
+	
+	background: -webkit-linear-gradient(#555555, #000000);
+	background: -moz-linear-gradient(#555555, #000000);
+	background: linear-gradient(#555555, #000000);
+}
+
+.nav_bar a.current-page
+{
+	background: -webkit-linear-gradient(#6666FF, #0000FF);
+	background: -moz-linear-gradient(#6666FF, #0000FF);
+	background: linear-gradient(#6666FF, #0000FF);
+}
+
+.nav_bar a:hover
+{
+	background: #666666;
+}
+
+.nav_bar a.current-page:hover
+{
+	background: #7777FF;
+}
+
+.nav_bar p
+{
+	padding: 0px 15px 0px 15px;
+}
+
+.gallery
+{
+	margin: 0px auto;
+	text-shadow: 3px 3px 0px #000000;
+}
+
+.contact_info
+{
+	color: #33FF33;
+}
+
+#content
+{
+	float: right;
+	background-color: rgba(0, 0, 0, 0.85);
+	padding: 10px 20px 10px 20px;
+	margin: 10% 10% 10% 0px;
+	max-width: 35%;
+	text-shadow: 3px 3px 0px #000000;
+}
+
+#highlight
+{
+	float: left;
+	max-width: 25%;
+	margin: 25px 4.15% 25px 4.15%;
+	border-radius: 50px;
+	background-color: rgba(0, 0, 0, 0.85);
+	text-align: center;
+	padding: 0px 10px 0px 10px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#highlight img
+{
+	border-radius: 50px;
+	margin-top: 20px;
+}
+
+#highlight h2
+{
+	margin: 0px;
+}
+
+#past_projects
+{
+	display: none;
+}
+
+@media screen and (max-width: 1280px)
+{
+	#highlight
+	{
+		max-width: 40%;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+}
+
+@media screen and (max-width: 720px)
+{
+	.desktop
+	{
+		display: none;
+	}
+	
+	.mobile
+	{
+		display: block;
+	}
+	
+	.nav_bar ul
+	{
+		margin-top: -16px;
+		margin-left: -130px;
+	}
+	
+	#content
+	{
+		max-width: 80%
+	}
+	
+	#highlight
+	{
+		max-width: 80%;
+		margin-right: 9%;
+		margin-left: 9%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

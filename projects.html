@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Michael Berger - Projects</title>
+		<link rel="stylesheet" type="text/css" href="portfolio-2.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		
+		<!-- ====== Javascript for Dynamic Page ====== -->
+		
+		<script>
+		
+			//Enabling strict mode
+			"use strict";
+			
+			//WHEN the page is loaded...
+			$(document).ready(function(){
+				
+				//Hiding the past projects div and nav bar element
+				$("#past_projects").hide();
+				$("[id=past-projects]").removeClass("current-page");
+				
+				//Showing the current projects div and nav bar element
+				$("#current_projects").fadeIn();
+				$("[id=current-projects]").addClass("current-page");
+				
+				//WHEN the "Current Projects" link is clicked...
+				$("[id=current-projects]").on("click", function(e){
+				
+					//Hiding the past projects div and nav bar element
+					$("#past_projects").hide();
+					$("[id=past-projects]").removeClass("current-page");
+					
+					//Showing the current projects div and nav bar element
+					$("#current_projects").fadeIn();
+					$("[id=current-projects]").addClass("current-page");
+				
+				});
+				
+				//WHEN the "Past Projects" link is clicked...
+				$("[id=past-projects]").on("click", function(e){
+				
+					//Hiding the current projects div and nav bar element
+					$("#current_projects").hide();
+					$("[id=current-projects]").removeClass("current-page");
+					
+					//Showing the past projects div and nav bar element
+					$("#past_projects").fadeIn();
+					$("[id=past-projects]").addClass("current-page");
+				
+				});
+				
+			});
+		
+		</script>
+		
+		<!-- ====== Setting the background ====== -->
+		<style>
+			
+			html
+			{
+				background-color: rgb(255, 200, 255);
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<!--
+				====== The Navigation Bar (Desktop) ======
+		-->
+		
+		<div class="nav_bar desktop">
+			<a href="index.html"><p>Home</p></a>
+			<a href="about_me.html"><p>About Me</p></a>
+			<a href="projects.html" class="current-page"><p>Projects</p></a>
+			<a href="experience.html"><p>Job Experience</p></a>
+			<a href="contact.html"><p>Contact</p></a>
+		</div>
+		
+		<!--
+				====== The Navigation Bar (Mobile) ======
+		-->
+		
+		<div class="nav_bar mobile">
+			<a href="index.html"><p><i class="fa fa-home"></i></p></a>
+			<a href="about_me.html"><p><i class="fa fa-question-circle"></i></p></a>
+			<a href="projects.html" class="current-page"><p>Projects</p></a>
+			<a href="experience.html"><p>Experience</p></a>
+			<a href="contact.html"><p><i class="fa fa-envelope-o"></i></p></a>
+		</div>
+		
+		<!--
+				====== The Gallery Navigation Bars ======
+		-->
+		
+		<br><br><br>
+		
+		<div class="nav_bar desktop">
+			<a href="#" id="current-projects" class="current-page"><p>Current Projects</p></a>
+			<a href="#" id="past-projects"><p>Past Projects</p></a>
+		</div>
+		
+		<div class="nav_bar mobile">
+			<a href="#" id="current-projects" class="current-page"><p>Current Projects</p></a>
+			<a href="#" id="past-projects"><p>Past Projects</p></a>
+		</div>
+		<br><br><br>
+		<!--
+				====== The Gallery ======
+		-->
+		
+		<div id="current_projects" class="gallery">
+    
+      <div id="highlight">
+				<a href="https://github.com/Michael-A-Berger/Honsan">
+					<img src="media/favicon.png" alt="" width="50%" height="50%" />
+					<h2>Honsan</h2>
+				</a>
+				<p>A Single Page Application library web service for anime & manga collections. It is made
+        using ES6, Node, React, Mongoose, Express, and Gulp. The ultimate goal is to create a service
+        that can replace the aging RIT Anime Club library system for anime & manga club rentals.</p>
+			</div>
+			
+			<div id="highlight">
+				<a>
+					<img src="media/rrgc-bot_avatar.png" alt="" width="50%" height="50%" />
+					<h2>DPS-kun</h2>
+				</a>
+				<p>A chat bot for the Rochester Rhythm Game Club Discord server. It retrieves wiki links,
+				issues rhythm game challenges, and differentiates between average users and server admins.
+				Currently it is being tested for defects.</p>
+			</div>
+			
+		</div>
+		
+		<div id="past_projects" class="gallery">
+			
+			<div id="highlight">
+				<a href="https://gdq-tally.herokuapp.com/">
+					<img src="media/heroku_logo.png" alt="" width="50%" height="50%" />
+					<h2>GDQ Tally</h2>
+				</a>
+				<p>A website that tracks stats related to the Games Done Quick speedrunning events. This website was
+				being developed with Node.js, Request.js, Moment.js, and the Speedrun.com API. Hosting was handled by
+				Heroku. Currently this project is on hold and under consideration for a revamp.</p>
+			</div>
+			
+			<div id="highlight">
+				<a href="https://people.rit.edu/mxb3145/330/audio-visualizer/">
+					<img src="media/html5_logo.png" alt="" width="50%" height="50%" />
+					<h2>Anime Audio Visualizer</h2>
+				</a>
+				<p>An audio visualizer that I created for my Rich Media Web Application Development class, IGME 330. 
+				It plays (mostly) spoiler-free clips from anime series and overlays the videos with audio effects produced
+				by a set of free songs. This project was built using HTML5 video and audio features alongside
+				Javascript's canvas feature.</p>
+			</div>
+			
+			<div id="highlight">
+				<a href="https://github.com/ThePerplexedTurtles/Sparklegore">
+					<img src="media/perplexed_turtles.png" alt="" width="50%" height="50%" />
+					<h2>Sparklegore</h2>
+				</a>
+				<p>A video game I helped create alongside several classmates from my IGME 106 class at Rochester
+				Institute of Technology. It was made using XNA and I was in charge of implementing the player character
+				physics and collision detection. I also helped compile the code together so that it would all work in one
+				program.</p>
+			</div>
+			
+			<div id="highlight">
+				<a href="https://github.com/Michael-A-Berger/Ember-Engine">
+					<img src="media/github_logo.png" alt="" width="50%" height="50%" />
+					<h2>Ember Engine</h2>
+				</a>
+				<p>A 2D video game engine I made out of Java's default libraries when I was in high school. The engine
+				supports custom fonts, sprite scaling, and custom global variables. I never made a game with it,
+				but all of the functionality is there and ready for anyone to use.</p>
+			</div>
+			
+		</div>
+		
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

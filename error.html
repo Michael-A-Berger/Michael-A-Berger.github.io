@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Michael Berger - 404 Error</title>
+		<link rel="stylesheet" type="text/css" href="portfolio-2.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		
+		<!-- ====== Setting the background ====== -->
+		<style>
+			
+			html
+			{
+				background-color: rgb(200, 200, 255);
+			}
+			
+		</style>
+		
+		<!--  ====== Javascript video randomizer ====== -->
+		<script>
+			
+			//Enabling strict mode
+			"use strict";
+			
+			//Creating the array of videos
+			var videos = ["media/real-life-doodle-1.webm", "media/real-life-doodle-2.webm", "media/real-life-doodle-3.webm",
+							"media/real-life-doodle-4.webm", "media/real-life-doodle-5.webm", "media/real-life-doodle-6.webm"];
+			
+			//WHEN the page is loaded...
+			$(document).ready(function(){
+				
+				//Getting a random video index
+				var num = Math.round(6 * Math.random());
+				console.log("- Video Index: " + num);
+				
+				//IF the video index is greater than 5...
+				if (num > 5)
+				{
+					//Setting the video index to the last video
+					num = 5;
+				}
+				
+				//Changing the source of the video
+				$("#myVideo").attr("src", videos[num]);
+				
+				//Reloading the video
+				$("video")[0].load();
+			});
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<!--
+				====== The Navigation Bar (Desktop) ======
+		-->
+		
+		<div class="nav_bar desktop">
+			<a href="index.html"><p>Home</p></a>
+			<a href="about_me.html"><p>About Me</p></a>
+			<a href="projects.html"><p>Projects</p></a>
+			<a href="experience.html"><p>Job Experience</p></a>
+			<a href="contact.html"><p>Contact</p></a>
+		</div>
+		
+		<!--
+				====== The Navigation Bar (Mobile) ======
+		-->
+		
+		<div class="nav_bar mobile">
+			<a href="index.html"><p><i class="fa fa-home"></i></p></a>
+			<a href="about_me.html"><p><i class="fa fa-question-circle"></i></p></a>
+			<a href="projects.html"><p>Projects</p></a>
+			<a href="experience.html"><p>Job Experience</p></a>
+			<a href="contact.html"><p><i class="fa fa-envelope-o"></i></p></a>
+		</div>
+		
+		<!--
+				====== The Content ======
+		-->
+		
+		<div id="content">
+			<h1>That Page Doesn't Exist!</h1>
+			
+			<h2>But don't worry, here's a fun video instead:</h2>
+			
+			<video width="70%" height="70%" controls>
+				<source id="myVideo" src="media/real-life-doodle-1.webm" type="video/webm">
+				Cripes, your browser doesn't support the video. Sorry about that!
+			</video>
+			
+			<p>Videos courtesy of <b><a href="https://www.reddit.com/r/reallifedoodles">/r/RealLifeDoodles</a></b>.</p>
+		</div>
+		
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
